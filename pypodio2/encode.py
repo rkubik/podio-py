@@ -373,7 +373,7 @@ class MultipartYielder:
         self.p = self.params[self.i]
         self.param_iter = self.p.iter_encode(self.boundary)
         self.i += 1
-        return self.next()
+        return self.__next__()
 
     def reset(self):
         self.i = 0
