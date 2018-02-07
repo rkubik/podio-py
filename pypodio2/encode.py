@@ -349,7 +349,7 @@ class MultipartYielder:
         of parameters"""
         if self.param_iter is not None:
             try:
-                block = self.param_iter.next()
+                block = next(self.param_iter)
                 self.current += len(block)
                 if self.cb:
                     self.cb(self.p, self.current, self.total)
